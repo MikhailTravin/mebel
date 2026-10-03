@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Главная</title>
+    {% include 'blocks/head.njk' %}
+</head>
+
+<body class="preload mp">
+    <div class="main-wrapper-outer">
+        {% include 'blocks/header.njk' %}
+        <main class="main">
+
+            <div class="block-intro">
+                <div class="container">
+                    <div class="block-intro__content">
+                        <div class="block-intro__top">
+                            <div class="block-intro__title">
+                                ПРОЕКТИРУЕМ. ПРОИЗВОДИМ. СОЗДАЁМ
+                            </div>
+                            <h1 class="title1">
+                                Мебель на заказ по индивидуальным проектам
+                            </h1>
+                            <p>
+                                Для тех, кто ценит качество, эстетику и продуманные решения
+                            </p>
+                        </div>
+                        <div class="block-intro__buttons">
+                            <a href="./" data-popup="#call" class="btn">
+                                <img src="img/icons/calculator.svg" alt="">
+                                <span>Получить расчет</span>
+                            </a>
+                            <a href="./" class="btn btn-white">
+                                <span>Смотреть проекты</span>
+                                <div class="btn__icon">
+                                    <svg aria-hidden="true" width="16" height="9">
+                                        <use xlink:href="img/sprite.svg#arrow1"></use>
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="block-intro-descr">
+                            <div class="block-intro-descr__column">
+                                <div class="block-intro-descr__icon">
+                                    <img src="img/icons/pro.svg" alt="">
+                                </div>
+                                <div class="block-intro-descr__item">
+                                    <p>
+                                        Собственное<br> производство<br> в Москве
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="block-intro-descr__column">
+                                <div class="block-intro-descr__icon">
+                                    <img src="img/icons/like.svg" alt="">
+                                </div>
+                                <div class="block-intro-descr__item">
+                                    <p>
+                                        Индивидуальный<br> подход к каждому<br> проекту
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="block-intro-descr__column">
+                                <div class="block-intro-descr__icon">
+                                    <img src="img/icons/car.svg" alt="">
+                                </div>
+                                <div class="block-intro-descr__item">
+                                    <p>
+                                        Доставка и монтаж<br> по всей России
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="block-intro-descr__column">
+                                <div class="block-intro-descr__icon">
+                                    <img src="img/icons/garant.svg" alt="">
+                                </div>
+                                <div class="block-intro-descr__item">
+                                    <p>
+                                        Гарантия качества<br> и долговечности
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <img src="img/bg1.webp" alt="" class="block-intro__bg1">
+            </div>
+
+        </main>
+        {% include 'blocks/footer.njk' %}
+    </div>
+    {% include 'blocks/popups.njk' %}
+    {% include 'blocks/scripts.njk' %}
+</body>
+
+</html>
