@@ -151,9 +151,8 @@ function uniqArray(array) {
 
 //========================================================================================================================================================
 
-/*
 const iconMenu = document.querySelector('.icon-menu');
-const headerBody = document.querySelector('.header__menu');
+const headerBody = document.querySelector('.header-menu');
 
 if (iconMenu) {
   iconMenu.addEventListener("click", function (e) {
@@ -170,6 +169,207 @@ document.addEventListener("click", function (e) {
     document.documentElement.classList.remove("menu-open");
   }
 });
+
+//========================================================================================================================================================
+
+// Добавление к шапке при скролле
+const header = document.querySelector('.header');
+if (header) {
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > 0) {
+      header.classList.add('_header-scroll');
+      document.documentElement.classList.add('header-scroll');
+    } else {
+      header.classList.remove('_header-scroll');
+      document.documentElement.classList.remove('header-scroll');
+    }
+  });
+}
+
+//========================================================================================================================================================
+
+//До-после
+class BeforeAfter {
+  constructor(props) {
+    let defaultConfig = {
+      init: true,
+      logging: true,
+      swiper: null
+    };
+    this.config = Object.assign(defaultConfig, props);
+    this.isDragging = false;
+
+    if (this.config.init) {
+      const beforeAfterItems = document.querySelectorAll('[data-ba]');
+      if (beforeAfterItems.length > 0) {
+        this.beforeAfterInit(beforeAfterItems);
+      }
+    }
+  }
+
+  beforeAfterInit(beforeAfterItems) {
+    beforeAfterItems.forEach((beforeAfter, index) => {
+      if (beforeAfter) {
+        this.beforeAfterClasses(beforeAfter);
+        this.beforeAfterItemInit(beforeAfter);
+      }
+    });
+  }
+
+  beforeAfterClasses(beforeAfter) {
+    beforeAfter.addEventListener('mouseover', function (e) {
+      const targetElement = e.target;
+      const isArrow = targetElement.closest('[data-ba-arrow]');
+
+      if (!isArrow) {
+        if (targetElement.closest('[data-ba-before]')) {
+          beforeAfter.classList.remove('_right');
+          beforeAfter.classList.add('_left');
+        } else {
+          beforeAfter.classList.add('_right');
+          beforeAfter.classList.remove('_left');
+        }
+      }
+    });
+
+    beforeAfter.addEventListener('mouseleave', function () {
+      beforeAfter.classList.remove('_left');
+      beforeAfter.classList.remove('_right');
+    });
+  }
+
+  beforeAfterItemInit(beforeAfter) {
+    const beforeAfterArrow = beforeAfter.querySelector('[data-ba-arrow]');
+    const afterItem = beforeAfter.querySelector('[data-ba-after]');
+
+    if (!beforeAfterArrow || !afterItem) {
+      return;
+    }
+
+    const beforeAfterArrowWidth = parseFloat(
+      window.getComputedStyle(beforeAfterArrow).getPropertyValue('width')
+    );
+
+    const handleStart = (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      this.handleDragStart(e, beforeAfter, afterItem, beforeAfterArrowWidth);
+    };
+
+    beforeAfterArrow.addEventListener('mousedown', handleStart);
+    beforeAfterArrow.addEventListener('touchstart', handleStart, { passive: false });
+  }
+
+  handleDragStart(e, beforeAfter, afterItem, arrowWidth) {
+    e.preventDefault();
+    e.stopPropagation();
+    this.isDragging = true;
+
+    const swiperInstance = this.config.swiper;
+
+    if (swiperInstance && typeof swiperInstance === 'object') {
+      swiperInstance.allowTouchMove = false;
+      swiperInstance.allowSlideNext = false;
+      swiperInstance.allowSlidePrev = false;
+      swiperInstance.touchEventsData.preventDefault = true;
+    }
+
+    document.body.style.userSelect = 'none';
+    document.body.style.webkitUserSelect = 'none';
+
+    const sizes = {
+      width: beforeAfter.offsetWidth,
+      left: beforeAfter.getBoundingClientRect().left - window.scrollX
+    };
+
+    const moveHandler = (eMove) => {
+      if (!this.isDragging) return;
+      eMove.preventDefault();
+      eMove.stopPropagation();
+      this.handleMouseMove(eMove, beforeAfter, afterItem, arrowWidth, sizes);
+    };
+
+    const endHandler = (eEnd) => {
+      if (!this.isDragging) return;
+
+      eEnd.preventDefault();
+      eEnd.stopPropagation();
+
+      this.isDragging = false;
+
+      document.removeEventListener('mousemove', moveHandler);
+      document.removeEventListener('touchmove', moveHandler);
+      document.removeEventListener('mouseup', endHandler);
+      document.removeEventListener('touchend', endHandler);
+      document.removeEventListener('touchcancel', endHandler);
+
+      document.body.style.userSelect = '';
+      document.body.style.webkitUserSelect = '';
+
+      if (swiperInstance && typeof swiperInstance === 'object') {
+        setTimeout(() => {
+          swiperInstance.allowTouchMove = true;
+          swiperInstance.allowSlideNext = true;
+          swiperInstance.allowSlidePrev = true;
+          swiperInstance.touchEventsData.preventDefault = false;
+        }, 50);
+      }
+    };
+
+    document.addEventListener('mousemove', moveHandler);
+    document.addEventListener('mouseup', endHandler);
+    document.addEventListener('touchmove', moveHandler, { passive: false });
+    document.addEventListener('touchend', endHandler);
+    document.addEventListener('touchcancel', endHandler);
+
+    document.addEventListener('dragstart', (eDrag) => {
+      eDrag.preventDefault();
+    });
+  }
+
+  handleMouseMove(e, beforeAfter, afterItem, arrowWidth, sizes) {
+    let clientX;
+    if (e.type === 'touchmove' && e.touches && e.touches[0]) {
+      clientX = e.touches[0].clientX;
+    } else if (e.clientX) {
+      clientX = e.clientX;
+    } else {
+      return;
+    }
+
+    let posLeft = clientX - sizes.left;
+    posLeft = Math.max(0, Math.min(posLeft, sizes.width));
+
+    const way = (posLeft / sizes.width) * 100;
+    const arrowLeft = `calc(${way}% - ${arrowWidth}px)`;
+
+    const arrow = beforeAfter.querySelector('[data-ba-arrow]');
+    if (arrow) {
+      arrow.style.left = arrowLeft;
+      arrow.style.transform = 'translate(50%, -50%)';
+    }
+    afterItem.style.width = `${100 - way}%`;
+  }
+}
+
+if (typeof window.modules_flsModules === 'undefined') {
+  window.modules_flsModules = {};
+}
+
+window.modules_flsModules.ba = new BeforeAfter({
+  logging: true
+});
+
+//========================================================================================================================================================
+
+Fancybox.bind("[data-fancybox]", {
+  // опции
+});
+
+//========================================================================================================================================================
+
+/*
+
 
 //========================================================================================================================================================
 
@@ -954,19 +1154,7 @@ function menuClose() {
 
 //========================================================================================================================================================
 
-// Добавление к шапке при скролле
-const header = document.querySelector('.header');
-if (header) {
-  window.addEventListener('scroll', function () {
-    if (window.scrollY > 0) {
-      header.classList.add('_header-scroll');
-      document.documentElement.classList.add('header-scroll');
-    } else {
-      header.classList.remove('_header-scroll');
-      document.documentElement.classList.remove('header-scroll');
-    }
-  });
-}
+
 
 //========================================================================================================================================================
 
@@ -1603,7 +1791,5 @@ pageNavigation();
 
 //========================================================================================================================================================
 
-Fancybox.bind("[data-fancybox]", {
-  // опции
-});
+
 */

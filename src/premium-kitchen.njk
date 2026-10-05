@@ -11,8 +11,296 @@
         {% include 'blocks/header.njk' %}
         <main class="main">
 
-            <div class="block-intro">
+            <div class="block-intro block-intro-other">
+                <div class="container">
+                    <div class="block-intro__content">
+                        <div class="breadcrumbs">
+                            <ul>
+                                <li>
+                                    <a href="#" class="home">
+                                        <img src="img/icons/home.svg" alt="">
+                                    </a>
+                                </li>
+                                <li><a href="./">Каталог мебели</a></li>
+                                <li><span>Кухня премиум-класса</span></li>
+                            </ul>
+                        </div>
+                        <div class="block-intro__top">
+                            <h1 class="title1">
+                                Кухня<br> премиум-класса
+                            </h1>
+                            <p>
+                                Авторские кухни с индивидуальной архитектурой,<br> сложными материалами и точной
+                                реализацией
+                                под<br> ваше пространство
+                            </p>
+                        </div>
+                        <div class="block-intro__buttons">
+                            <a href="./" data-popup="#call" class="btn">
+                                <img src="img/icons/calculator.svg" alt="">
+                                <span>Получить расчет</span>
+                            </a>
+                            <a href="./" class="btn btn-white">
+                                <div class="btn__icon icon-construktor">
+                                    <svg aria-hidden="true" width="18" height="18">
+                                        <use xlink:href="img/sprite.svg#construktor"></use>
+                                    </svg>
+                                </div>
+                                <span>AI-конструктор интерьера</span>
+                            </a>
+                        </div>
+                        <div class="block-intro-descr">
+                            <div class="block-intro-descr__column">
+                                <div class="block-intro-descr__icon">
+                                    <img src="img/icons/pin.svg" alt="">
+                                </div>
+                                <div class="block-intro-descr__item">
+                                    <p>
+                                        Москва
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="block-intro-descr__column">
+                                <div class="block-intro-descr__icon">
+                                    <img src="img/icons/car.svg" alt="">
+                                </div>
+                                <div class="block-intro-descr__item">
+                                    <p>
+                                        Доставка по всей России
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <img src="img/bg1.webp" alt="" class="block-intro__bg1">
+            </div>
 
+            <div class="block-popular block1">
+                <div class="container">
+                    <div class="heading-complex">
+                        <h2 class="title2">
+                            Популярные варианты исполнения
+                        </h2>
+                    </div>
+                    <div class="block-popular__cards">
+                        <a href="./" class="card-catalog">
+                            <img loading="lazy" src="img/catalog/image1.webp" alt="" class="card-catalog__pic1">
+                            <div class="card-catalog__item">
+                                <div class="card-catalog__title">
+                                    Кухни премиум-класса
+                                </div>
+                                <div class="icon-arrow">
+                                    <svg aria-hidden="true" width="16" height="9">
+                                        <use xlink:href="img/sprite.svg#arrow1"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="./" class="card-catalog">
+                            <img loading="lazy" src="img/catalog/image2.webp" alt="" class="card-catalog__pic1">
+                            <div class="card-catalog__item">
+                                <div class="card-catalog__title">
+                                    Мебель
+                                    для ванной
+                                </div>
+                                <div class="icon-arrow">
+                                    <svg aria-hidden="true" width="16" height="9">
+                                        <use xlink:href="img/sprite.svg#arrow1"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="./" class="card-catalog">
+                            <img loading="lazy" src="img/catalog/image3.webp" alt="" class="card-catalog__pic1">
+                            <div class="card-catalog__item">
+                                <div class="card-catalog__title">
+                                    Спальни
+                                </div>
+                                <div class="icon-arrow">
+                                    <svg aria-hidden="true" width="16" height="9">
+                                        <use xlink:href="img/sprite.svg#arrow1"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="./" class="card-catalog">
+                            <img loading="lazy" src="img/catalog/image4.webp" alt="" class="card-catalog__pic1">
+                            <div class="card-catalog__item">
+                                <div class="card-catalog__title">
+                                    Прихожие
+                                </div>
+                                <div class="icon-arrow">
+                                    <svg aria-hidden="true" width="16" height="9">
+                                        <use xlink:href="img/sprite.svg#arrow1"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="./" class="card-catalog">
+                            <img loading="lazy" src="img/catalog/image5.webp" alt="" class="card-catalog__pic1">
+                            <div class="card-catalog__item">
+                                <div class="card-catalog__title">
+                                    Гостиные
+                                </div>
+                                <div class="icon-arrow">
+                                    <svg aria-hidden="true" width="16" height="9">
+                                        <use xlink:href="img/sprite.svg#arrow1"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="block-materials block2">
+                <div class="container">
+                    <div class="block-materials__content">
+                        <div class="heading-complex">
+                            <h2 class="title2">
+                                Материалы и фурнитура
+                            </h2>
+                            <a href="./" class="link">
+                                <span>Смотреть все материалы</span>
+                                <svg aria-hidden="true" width="16" height="9">
+                                    <use xlink:href="img/sprite.svg#arrow1"></use>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="block-materials__cards">
+                            <a href="./" class="card-material">
+                                <img src="img/materials/image1.webp" alt="" class="card-material__pic1">
+                                <div class="card-material__item">
+                                    <div class="card-material__title">
+                                        Натуральный шпон
+                                    </div>
+                                    <p>
+                                        Премиальное качество
+                                    </p>
+                                </div>
+                            </a>
+                            <a href="./" class="card-material">
+                                <img src="img/materials/image2.webp" alt="" class="card-material__pic1">
+                                <div class="card-material__item">
+                                    <div class="card-material__title">
+                                        Натуральный камень
+                                    </div>
+                                    <p>
+                                        Мрамор, кварцит, гранит
+                                    </p>
+                                </div>
+                            </a>
+                            <a href="./" class="card-material">
+                                <img src="img/materials/image3.webp" alt="" class="card-material__pic1">
+                                <div class="card-material__item">
+                                    <div class="card-material__title">
+                                        Керамика
+                                    </div>
+                                    <p>
+                                        Износостойкая и практичная
+                                    </p>
+                                </div>
+                            </a>
+                            <a href="./" class="card-material">
+                                <img src="img/materials/image4.webp" alt="" class="card-material__pic1">
+                                <div class="card-material__item">
+                                    <div class="card-material__title">
+                                        Металл и стекло
+                                    </div>
+                                    <p>
+                                        Металл и стекло
+                                    </p>
+                                </div>
+                            </a>
+                            <a href="./" class="card-material">
+                                <img src="img/materials/image5.webp" alt="" class="card-material__pic1">
+                                <div class="card-material__item">
+                                    <div class="card-material__title">
+                                        Премиальная фурнитура
+                                    </div>
+                                    <p>
+                                        Blum, Hettich, Grass
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="block-project block2">
+                <div class="container">
+                    <div class="block-project__content">
+                        <div class="heading-complex">
+                            <h2 class="title2">
+                                Реализованные проекты
+                            </h2>
+                            <a href="./" class="link">
+                                <span>Смотреть все проекты</span>
+                                <svg aria-hidden="true" width="16" height="9">
+                                    <use xlink:href="img/sprite.svg#arrow1"></use>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="block-project__cards">
+                            <a href="./" class="card-project card-project-long">
+                                <img loading="lazy" src="img/catalog/image3.webp" alt="" class="card-project__pic1">
+                                <div class="card-project__item">
+                                    <div class="card-project__titles">
+                                        <div class="card-project__title">
+                                            Кухня-премиум в ЖК “Садовые кварталы”
+                                        </div>
+                                        <p>
+                                            Кухня-премиум в ЖК “Садовые кварталы”
+                                        </p>
+                                    </div>
+                                    <div class="icon-arrow">
+                                        <svg aria-hidden="true" width="16" height="9">
+                                            <use xlink:href="img/sprite.svg#arrow1"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="./" class="card-project">
+                                <img loading="lazy" src="img/catalog/image2.webp" alt="" class="card-project__pic1">
+                                <div class="card-project__item">
+                                    <div class="card-project__titles">
+                                        <div class="card-project__title">
+                                            Кухня в загородном доме
+                                        </div>
+                                        <p>
+                                            Московская область - 28 м2 - Натуральный шпон, камень
+                                        </p>
+                                    </div>
+                                    <div class="icon-arrow">
+                                        <svg aria-hidden="true" width="16" height="9">
+                                            <use xlink:href="img/sprite.svg#arrow1"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="./" class="card-project">
+                                <img loading="lazy" src="img/catalog/image1.webp" alt="" class="card-project__pic1">
+                                <div class="card-project__item">
+                                    <div class="card-project__titles">
+                                        <div class="card-project__title">
+                                            Кухня в загородном доме
+                                        </div>
+                                        <p>
+                                            Москва - 12 м2 - Шпон ореха, стекло, металл
+                                        </p>
+                                    </div>
+                                    <div class="icon-arrow">
+                                        <svg aria-hidden="true" width="16" height="9">
+                                            <use xlink:href="img/sprite.svg#arrow1"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
 
         </main>
