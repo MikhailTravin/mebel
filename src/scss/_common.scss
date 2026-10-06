@@ -105,6 +105,11 @@ a {
           svg {
             fill: var(--ffffff);
           }
+          &.icon-refresh {
+            svg {
+              animation: rotate360 0.6s ease-in-out;
+            }
+          }
         }
       }
     }
@@ -170,13 +175,24 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 2px;
     &.icon-construktor {
       width: 18px;
       flex: 0 0 18px;
     }
     svg {
-      transition: fill 0.3s;
+      transition:
+        fill 0.3s,
+        transform 0.6s;
       fill: var(--ffffff);
+    }
+  }
+  @keyframes rotate360 {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
     }
   }
 }
