@@ -11,7 +11,7 @@
         {% include 'blocks/header.njk' %}
         <main class="main">
 
-            <div class="block-intro block-intro-other">
+            <div class="block-intro block-intro-other block-intro-cat">
                 <div class="container">
                     <div class="block-intro__content">
                         <div class="breadcrumbs">
@@ -30,10 +30,83 @@
                                 Кухня-гостиная<br> в ЖК “Садовые кварталы”
                             </h1>
                         </div>
+                        <div class="block-intro-descr">
+                            <div class="block-intro-descr__column">
+                                <div class="block-intro-descr__icon">
+                                    <img src="img/icons/house.svg" alt="">
+                                </div>
+                                <div class="block-intro-descr__item">
+                                    <div class="block-intro-descr__title">
+                                        Тип объекта
+                                    </div>
+                                    <p>
+                                        Квартира
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="block-intro-descr__column">
+                                <div class="block-intro-descr__icon">
+                                    <img src="img/icons/pin.svg" alt="">
+                                </div>
+                                <div class="block-intro-descr__item">
+                                    <div class="block-intro-descr__title">
+                                        Локация
+                                    </div>
+                                    <p>
+                                        Москва
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="block-intro-descr__column">
+                                <div class="block-intro-descr__icon">
+                                    <img src="img/icons/size.svg" alt="">
+                                </div>
+                                <div class="block-intro-descr__item">
+                                    <div class="block-intro-descr__title">
+                                        Площадь
+                                    </div>
+                                    <p>
+                                        42 м2
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="block-intro-descr__column">
+                                <div class="block-intro-descr__icon">
+                                    <img src="img/icons/calendar.svg" alt="">
+                                </div>
+                                <div class="block-intro-descr__item">
+                                    <div class="block-intro-descr__title">
+                                        Год реализации
+                                    </div>
+                                    <p>
+                                        2024
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block-intro-materials">
+                            <div class="block-intro-materials__title">
+                                Использованные материалы
+                            </div>
+                            <ul>
+                                <li>
+                                    Шпон дуба
+                                </li>
+                                <li>
+                                    Камень
+                                </li>
+                                <li>
+                                    Матовая эмаль
+                                </li>
+                                <li>
+                                    Латунь
+                                </li>
+                            </ul>
+                        </div>
                         <div class="block-intro__buttons">
                             <a href="./" data-popup="#call" class="btn">
                                 <img src="img/icons/calculator.svg" alt="">
-                                <span>Получить расчет</span>
+                                <span>Получить расчет проекта</span>
                             </a>
                             <a href="./" class="btn btn-white">
                                 <div class="btn__icon icon-construktor">
@@ -44,31 +117,318 @@
                                 <span>AI-конструктор интерьера</span>
                             </a>
                         </div>
-                        <div class="block-intro-descr">
-                            <div class="block-intro-descr__column">
-                                <div class="block-intro-descr__icon">
-                                    <img src="img/icons/pin.svg" alt="">
+                    </div>
+                </div>
+                <img src="img/bg3.webp" alt="" class="block-intro__bg1">
+            </div>
+
+            <div class="block-about-project block2">
+                <div class="container">
+                    <div class="block-about-project__content">
+                        <div class="heading-complex2">
+                            <h2 class="title2">
+                                О проекте
+                            </h2>
+                            <div class="heading-complex2__text">
+                                <p>
+                                    Задача заключалась в создании лаконичного пространства кухни-гостиной, которое
+                                    сочетает
+                                    в себе премиальный внешний вид и максимальный комфорт для жизни
+                                </p>
+                                <p>
+                                    Клиент хотел получить интерьер с натуральными материалами, большим количеством мест
+                                    хранения и современным функционалом
+                                </p>
+                            </div>
+                        </div>
+                        <div class="block-about-project__body">
+                            <div class="block-about-project__column">
+                                <div class="block-about-project__icon">
+                                    <img src="img/icons/like.svg" alt="">
                                 </div>
-                                <div class="block-intro-descr__item">
+                                <div class="block-about-project__item">
+                                    <div class="block-about-project__title">
+                                        Индивидуальный подход
+                                    </div>
                                     <p>
-                                        Москва
+                                        Проект разработан с учётом образа жизни семье и особенностей планировки
                                     </p>
                                 </div>
                             </div>
-                            <div class="block-intro-descr__column">
-                                <div class="block-intro-descr__icon">
-                                    <img src="img/icons/car.svg" alt="">
+                            <div class="block-about-project__column">
+                                <div class="block-about-project__icon">
+                                    <img src="img/icons/material.svg" alt="">
                                 </div>
-                                <div class="block-intro-descr__item">
+                                <div class="block-about-project__item">
+                                    <div class="block-about-project__title">
+                                        Сложные материалы
+                                    </div>
                                     <p>
-                                        Доставка по всей России
+                                        Сочетание натурального шпона дуба, камня и латуни
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="block-about-project__column">
+                                <div class="block-about-project__icon">
+                                    <img src="img/icons/pro.svg" alt="">
+                                </div>
+                                <div class="block-about-project__item">
+                                    <div class="block-about-project__title">
+                                        Точное исполнение
+                                    </div>
+                                    <p>
+                                        Собственное производство и контроль качества на каждом этапе
                                     </p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <img src="img/bg3.webp" alt="" class="block-intro__bg1">
+            </div>
+
+            <div class="block-gallery block2">
+                <div class="container">
+                    <div class="heading-complex">
+                        <h2 class="title2">
+                            Галерея проекта
+                        </h2>
+                    </div>
+                    <div class="block-gallery__body">
+                        <div class="block-gallery__columns">
+                            <div class="block-gallery__column">
+                                <a href="img/catalog/image6.webp" data-fancybox="gallery2" class="block-gallery__image">
+                                    <img loading="lazy" src="img/catalog/image6.webp" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="block-gallery__columns">
+                            <div class="block-gallery__column">
+                                <a href="img/catalog/image6.webp" data-fancybox="gallery2" class="block-gallery__image">
+                                    <img loading="lazy" src="img/catalog/image6.webp" alt="">
+                                </a>
+                                <a href="img/catalog/image6.webp" data-fancybox="gallery2" class="block-gallery__image">
+                                    <img loading="lazy" src="img/catalog/image6.webp" alt="">
+                                </a>
+                            </div>
+                            <div class="block-gallery__column">
+                                <a href="img/catalog/image6.webp" data-fancybox="gallery2" class="block-gallery__image">
+                                    <img loading="lazy" src="img/catalog/image6.webp" alt="">
+                                </a>
+                                <a href="img/catalog/image6.webp" data-fancybox="gallery2" class="block-gallery__image">
+                                    <img loading="lazy" src="img/catalog/image6.webp" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="block-descr-categories block2">
+                <div class="container">
+                    <div class="block-descr-categories__content">
+                        <div class="block-descr-categories__column">
+                            <div class="heading-complex">
+                                <h2 class="title2">
+                                    Планировочные решения
+                                </h2>
+                            </div>
+                            <div class="block-descr-categories__body">
+                                <img loading="lazy" src="img/image10.webp" alt="" class="block-descr-categories__pic1">
+                                <ul>
+                                    <li>
+                                        <div class="block-descr-categories__icon">
+                                            <img loading="lazy" src="img/icons/tick.svg" alt="">
+                                        </div>
+                                        <p>
+                                            Объединили кухню и ностиную в единое пространство
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <div class="block-descr-categories__icon">
+                                            <img loading="lazy" src="img/icons/tick.svg" alt="">
+                                        </div>
+                                        <p>
+                                            Разместили остров с барной стойкой и системой хранения
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <div class="block-descr-categories__icon">
+                                            <img loading="lazy" src="img/icons/tick.svg" alt="">
+                                        </div>
+                                        <p>
+                                            Предусмотрели колонны для встроенной техники и отдельную кладовую
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <div class="block-descr-categories__icon">
+                                            <img loading="lazy" src="img/icons/tick.svg" alt="">
+                                        </div>
+                                        <p>
+                                            Организовали скрытые системы хранения и подсветку
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="block-descr-categories__column">
+                            <div class="heading-complex">
+                                <h2 class="title2">
+                                    Материалы и фурнитура
+                                </h2>
+                            </div>
+                            <div class="block-descr-categories__cards">
+                                <div class="block-descr-categories__card">
+                                    <img loading="lazy" src="img/materials/image1.webp" alt="">
+                                    <div class="block-descr-categories__item">
+                                        <div class="block-descr-categories__title">
+                                            Шпон дуба
+                                        </div>
+                                        <p>
+                                            Натуральный шпон дуба, селект
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="block-descr-categories__card">
+                                    <img loading="lazy" src="img/materials/image2.webp" alt="">
+                                    <div class="block-descr-categories__item">
+                                        <div class="block-descr-categories__title">
+                                            Матовая эмаль
+                                        </div>
+                                        <p>
+                                            Фасады в матовой эмали цвета песок
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="block-descr-categories__card">
+                                    <img loading="lazy" src="img/materials/image4.webp" alt="">
+                                    <div class="block-descr-categories__item">
+                                        <div class="block-descr-categories__title">
+                                            Стекло тонированное
+                                        </div>
+                                        <p>
+                                            Витрины с тонированным бронзовым стеклом
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="block-stages block1">
+                <div class="container">
+                    <div class="heading-complex">
+                        <h2 class="title2">
+                            Этапы реализации
+                        </h2>
+                    </div>
+                    <div class="block-stages__body">
+                        <div class="block-stages__column">
+                            <div class="block-stages__number">01</div>
+                            <div class="block-stages__item">
+                                <div class="block-stages__title">
+                                    Планирование
+                                </div>
+                                <p>
+                                    Разработка концепции, 3D-визуализация и рабочая документация
+                                </p>
+                            </div>
+                        </div>
+                        <div class="block-stages__column">
+                            <div class="block-stages__number">02</div>
+                            <div class="block-stages__item">
+                                <div class="block-stages__title">
+                                    Производство
+                                </div>
+                                <p>
+                                    Изготовление мебели на собственном производстве с контролем качества
+                                </p>
+                            </div>
+                        </div>
+                        <div class="block-stages__column">
+                            <div class="block-stages__number">03</div>
+                            <div class="block-stages__item">
+                                <div class="block-stages__title">
+                                    Монтаж
+                                </div>
+                                <p>
+                                    Доставка и профессиональный монтаж на объекте
+                                </p>
+                            </div>
+                        </div>
+                        <div class="block-stages__column">
+                            <div class="block-stages__number">04</div>
+                            <div class="block-stages__item">
+                                <div class="block-stages__title">
+                                    Результат
+                                </div>
+                                <p>
+                                    Полностью готовое пространство, готовое к жизни
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="block-required1 block2">
+                <div class="container">
+                    <div class="block-required1__content">
+                        <div class="card-review">
+                            <div class="card-review__top">
+                                <div class="card-review__icon">
+                                    <svg aria-hidden="true" width="46" height="34">
+                                        <use xlink:href="img/sprite.svg#quote"></use>
+                                    </svg>
+                                </div>
+                                <p>
+                                    Очень довольны результатом! Кухня получилась именно такой как мы представляли, а
+                                    мест
+                                    хранения даже больше, чем ожидалось. Качество материалов и сборки - на высшем
+                                    уровне
+                                </p>
+                            </div>
+                            <div class="card-review__bottom">
+                                <img loading="lazy" src="img/photo1.webp" alt="" class="card-review__pic1">
+                                <div class="card-review__item">
+                                    <div class="card-review__name">
+                                        Екатерина и Андрей
+                                    </div>
+                                    <div class="card-review__subname">
+                                        Владельцы квартиры
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block-required1__body">
+                            <img loading="lazy" src="img/image11.webp" alt="" class="block-required1__pic1">
+                            <div class="heading-complex2">
+                                <h2 class="title2">
+                                    Хотите интерьер
+                                    такого же уровня?
+                                </h2>
+                                <p>
+                                    Расскажите о помещении — подготовим концепцию и предварительный расчёт проекта
+                                </p>
+                            </div>
+                            <div class="block-required1__buttons">
+                                <a href="./" data-popup="#call" class="btn">
+                                    <img src="img/icons/calculator.svg" alt="">
+                                    <span>Получить расчет</span>
+                                </a>
+                                <a href="./" class="btn btn-white">
+                                    <div class="btn__icon icon-construktor">
+                                        <svg aria-hidden="true" width="18" height="18">
+                                            <use xlink:href="img/sprite.svg#construktor"></use>
+                                        </svg>
+                                    </div>
+                                    <span>AI-конструктор интерьера</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="block-project block3">

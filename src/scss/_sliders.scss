@@ -1,67 +1,52 @@
-/*
 .slider-nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
+    @media (max-width: 768px) {
+        display: none;
+    }
     // .slider-nav__arrows
 
-    &__arrows {
-        border: 1px solid #dae5df;
-        width: 50px;
+    &__arrow {
+        border: 1px solid rgba(42, 38, 38, 0.1);
+        width: 80px;
         height: 50px;
-        flex: 0 0 50px;
+        flex: 0 0 80px;
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: var(--ffffff);
-        border-radius: 50%;
-        transition: opacity 0.3s;
-        @media (max-width: 768px) {
-            display: none;
-        }
+        border-radius: 8px;
+        background-color: transparent;
+        transition:
+            background-color 0.3s,
+            border 0.3s;
+
         svg {
-            fill: var(--02642b);
+            transition: fill 0.3s;
+            fill: var(--976e42);
         }
         &:hover {
-            opacity: 0.7;
+            border: 1px solid transparent;
+            background-color: var(--976e42);
+            svg {
+                fill: var(--ffffff);
+            }
         }
         &.arrow-prev {
             svg {
                 margin-right: 2px;
-                transform: rotate(-180deg);
+                transform: rotate(90deg);
             }
         }
         &.arrow-next {
             svg {
+                transform: rotate(-90deg);
                 margin-left: 2px;
             }
         }
     }
-
-    // .slider-nav__pagination
-
-    &__pagination {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-        .swiper-pagination-bullet {
-            width: 12px !important;
-            height: 12px;
-            flex: 0 0 12px;
-            margin: 0px 0px 0px 0px !important;
-            opacity: 1 !important;
-            border: 1px solid #dae5df;
-            border-radius: 50%;
-            background-color: var(--ffffff);
-        }
-        .swiper-pagination-bullet-active {
-            background-color: var(--02642b);
-        }
-    }
 }
-*/
 
 .swiper-pagination-lock {
     display: none;
