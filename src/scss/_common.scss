@@ -65,7 +65,9 @@ a {
   min-height: 70px;
   width: fit-content;
   padding: 10px 40px;
-  transition: color 0.3s;
+  transition:
+    color 0.3s,
+    opacity 0.3s;
   box-shadow: 0 15px 40px 0 rgba(42, 38, 38, 0.08);
   background: linear-gradient(87.17deg, #b9884c -0.94%, #90632e 52.14%, #b9884c 105.22%);
   @media (max-width: 768px) {
@@ -81,6 +83,10 @@ a {
     flex: 0 0 18px;
     width: 18px;
     height: auto;
+  }
+  &.disabled {
+    opacity: 0.5;
+    pointer-events: none;
   }
   &.btn-white {
     color: var(--2a2626);
