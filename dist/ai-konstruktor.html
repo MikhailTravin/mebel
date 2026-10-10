@@ -279,10 +279,12 @@
 										</div>
 									</div>
 									<div class="block-quiz-center">
-										<div class="block-quiz-center__column active">
+										<div class="block-quiz-center__column">
 											<div class="block-quiz-center__body">
-												<div class="block-quiz-center__title">
-													1. Выберите помещение
+												<div class="block-quiz-center__titles">
+													<div class="block-quiz-center__title">
+														1. Выберите помещение
+													</div>
 												</div>
 												<div class="options">
 													<label class="options__item">
@@ -390,8 +392,1355 @@
 												</div>
 											</div>
 										</div>
+										<div class="block-quiz-center__column">
+											<div class="block-quiz-center__body">
+												<div class="block-quiz-center__titles">
+													<div class="block-quiz-center__title">
+														2. Укажите размеры помещения
+													</div>
+													<p class="block-quiz-center__subtitle">
+														Введите точные размеры и отметьте архитектурные элементы
+													</p>
+												</div>
+												<div class="block-quiz-layout">
+													<div class="block-quiz-layout__left">
+														<div class="block-quiz-layout__column">
+															<div class="block-quiz-layout__title">
+																Размеры комнаты
+															</div>
+															<div class="block-quiz-layout__inputs">
+																<div class="block-quiz-layout__input">
+																	<label for="dlina">Длина (м)</label>
+																	<input id="dlina" autocomplete="off" type="text" name="form[]" placeholder="4.2">
+																</div>
+																<div class="block-quiz-layout__input">
+																	<label for="dlina">Ширина (м)</label>
+																	<input id="dlina" autocomplete="off" type="text" name="form[]" placeholder="3.1">
+																</div>
+																<div class="block-quiz-layout__input">
+																	<label for="dlina">Высота (м)</label>
+																	<input id="dlina" autocomplete="off" type="text" name="form[]" placeholder="2.7">
+																</div>
+															</div>
+														</div>
+														<div class="block-quiz-layout__column">
+															<div class="block-quiz-layout__title">
+																Форма помещения
+															</div>
+															<div class="options2">
+																<label class="options2__item">
+																	<input hidden class="options2__input" checked type="radio" value="1" name="option2">
+																	<span class="options2__label">
+																		<span class="options2__icon">
+																			<img src="img/icons/figure1.svg" alt="">
+																		</span>
+																		<span class="options2__text">Прямоугольная</span>
+																	</span>
+																</label>
+																<label class="options2__item">
+																	<input hidden class="options2__input" type="radio" value="2" name="option2">
+																	<span class="options2__label">
+																		<span class="options2__icon">
+																			<img src="img/icons/figure1.svg" alt="">
+																		</span>
+																		<span class="options2__text">Квадратная</span>
+																	</span>
+																</label>
+																<label class="options2__item">
+																	<input hidden class="options2__input" type="radio" value="3" name="option2">
+																	<span class="options2__label">
+																		<span class="options2__icon">
+																			<img src="img/icons/figure1.svg" alt="">
+																		</span>
+																		<span class="options2__text">Г-образная</span>
+																	</span>
+																</label>
+																<label class="options2__item">
+																	<input hidden class="options2__input" type="radio" value="4" name="option2">
+																	<span class="options2__label">
+																		<span class="options2__icon">
+																			<img src="img/icons/figure1.svg" alt="">
+																		</span>
+																		<span class="options2__text">П-образная</span>
+																	</span>
+																</label>
+																<label class="options2__item">
+																	<input hidden class="options2__input" type="radio" value="5" name="option2">
+																	<span class="options2__label">
+																		<span class="options2__icon">
+																			<img src="img/icons/figure1.svg" alt="">
+																		</span>
+																		<span class="options2__text">С нишей</span>
+																	</span>
+																</label>
+															</div>
+														</div>
+														<div class="block-quiz-layout__column">
+															<div class="block-quiz-layout__title">
+																Дополнительные параметры
+															</div>
+															<div class="block-quiz-layout__checkboxes">
+																<label class="checkbox1">
+																	<input checked class="checkbox1__input" type="checkbox" value="1" name="checkbox1">
+																	<span class="checkbox1__label">
+																		<span class="checkbox1__icon">
+																			<img src="img/icons/check1.svg" alt="">
+																		</span>
+																		<span class="checkbox1__text">Есть окно</span>
+																	</span>
+																</label>
+																<label class="checkbox1">
+																	<input class="checkbox1__input" type="checkbox" value="2" name="checkbox1">
+																	<span class="checkbox1__label">
+																		<span class="checkbox1__icon">
+																			<img src="img/icons/check1.svg" alt="">
+																		</span>
+																		<span class="checkbox1__text">Высокие потолки (> 3
+																			м)</span>
+																	</span>
+																</label>
+																<label class="checkbox1">
+																	<input class="checkbox1__input" type="checkbox" value="3" name="checkbox1">
+																	<span class="checkbox1__label">
+																		<span class="checkbox1__icon">
+																			<img src="img/icons/check1.svg" alt="">
+																		</span>
+																		<span class="checkbox1__text">Есть дверь</span>
+																	</span>
+																</label>
+																<label class="checkbox1">
+																	<input class="checkbox1__input" type="checkbox" value="4" name="checkbox1">
+																	<span class="checkbox1__label">
+																		<span class="checkbox1__icon">
+																			<img src="img/icons/check1.svg" alt="">
+																		</span>
+																		<span class="checkbox1__text">Балкон / выход на
+																			террасу</span>
+																	</span>
+																</label>
+																<label class="checkbox1">
+																	<input class="checkbox1__input" type="checkbox" value="5" name="checkbox1">
+																	<span class="checkbox1__label">
+																		<span class="checkbox1__icon">
+																			<img src="img/icons/check1.svg" alt="">
+																		</span>
+																		<span class="checkbox1__text">Неровные стены</span>
+																	</span>
+																</label>
+																<label class="checkbox1">
+																	<input class="checkbox1__input" type="checkbox" value="6" name="checkbox1">
+																	<span class="checkbox1__label">
+																		<span class="checkbox1__icon">
+																			<img src="img/icons/check1.svg" alt="">
+																		</span>
+																		<span class="checkbox1__text">Несущие колонны</span>
+																	</span>
+																</label>
+																<label class="checkbox1">
+																	<input class="checkbox1__input" type="checkbox" value="7" name="checkbox1">
+																	<span class="checkbox1__label">
+																		<span class="checkbox1__icon">
+																			<img src="img/icons/check1.svg" alt="">
+																		</span>
+																		<span class="checkbox1__text">Скос потолка /
+																			мансарда</span>
+																	</span>
+																</label>
+																<label class="checkbox1">
+																	<input class="checkbox1__input" type="checkbox" value="8" name="checkbox1">
+																	<span class="checkbox1__label">
+																		<span class="checkbox1__icon">
+																			<img src="img/icons/check1.svg" alt="">
+																		</span>
+																		<span class="checkbox1__text">Другое</span>
+																	</span>
+																</label>
+															</div>
+														</div>
+													</div>
+													<div class="block-quiz-layout__right">
+														<div data-tabs class="block-quiz-tabs">
+															<nav data-tabs-titles class="block-quiz-tabs__navigation">
+																<button type="button" class="block-quiz-tabs__title _tab-active">
+																	<span>3D
+																		вид</span>
+																</button>
+																<button type="button" class="block-quiz-tabs__title">
+																	<span> План
+																		сверху</span>
+																</button>
+															</nav>
+															<div data-tabs-body class="block-quiz-tabs__content">
+																<div class="block-quiz-tabs__body">
+																	<div class="block-quiz-tabs__items">
+																		<img src="img/image10.webp" alt="" class="block-quiz-tabs__pic1">
+																		<div class="block-quiz-tabs__farning">
+																			<div class="block-quiz-tabs__icon">
+																				<img src="img/icons/light.svg" alt="">
+																			</div>
+																			<p>Это предварительная схема. Точные размеры
+																				помогут создать
+																				более реалистичную визуализацию.</p>
+																		</div>
+																	</div>
+																</div>
+																<div class="block-quiz-tabs__body">
+																	<div class="block-quiz-tabs__items">
+																		<img src="img/image10.webp" alt="" class="block-quiz-tabs__pic1">
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="block-quiz-center__column active">
+											<div class="block-quiz-center__body">
+												<div class="block-quiz-center__titles">
+													<div class="block-quiz-center__title">
+														3. Планировка
+													</div>
+													<p class="block-quiz-center__subtitle">
+														Выберите конфигурацию кухни и укажите расположение элементов
+													</p>
+												</div>
+												<div class="block-quiz-layout block-quiz-layout2">
+													<div class="block-quiz-layout__left">
+														<div class="block-quiz-layout__column">
+															<div class="block-quiz-layout__title">
+																Форма Кухни
+															</div>
+															<div class="options2 options2-grid">
+																<label class="options2__item">
+																	<input hidden class="options2__input" checked type="radio" value="1" name="option2">
+																	<span class="options2__label">
+																		<span class="options2__icon">
+																			<img src="img/icons/figure1.svg" alt="">
+																		</span>
+																		<span class="options2__text">Прямоугольная</span>
+																	</span>
+																</label>
+																<label class="options2__item">
+																	<input hidden class="options2__input" type="radio" value="2" name="option2">
+																	<span class="options2__label">
+																		<span class="options2__icon">
+																			<img src="img/icons/figure1.svg" alt="">
+																		</span>
+																		<span class="options2__text">Квадратная</span>
+																	</span>
+																</label>
+																<label class="options2__item">
+																	<input hidden class="options2__input" type="radio" value="3" name="option2">
+																	<span class="options2__label">
+																		<span class="options2__icon">
+																			<img src="img/icons/figure1.svg" alt="">
+																		</span>
+																		<span class="options2__text">Г-образная</span>
+																	</span>
+																</label>
+																<label class="options2__item">
+																	<input hidden class="options2__input" type="radio" value="4" name="option2">
+																	<span class="options2__label">
+																		<span class="options2__icon">
+																			<img src="img/icons/figure1.svg" alt="">
+																		</span>
+																		<span class="options2__text">П-образная</span>
+																	</span>
+																</label>
+															</div>
+														</div>
+														<div class="block-quiz-layout__column">
+															<div class="block-quiz-layout__title">
+																Расположение в помещении
+															</div>
+															<div data-tabs class="block-quiz-tabs">
+																<nav data-tabs-titles class="block-quiz-tabs__navigation">
+																	<button type="button" class="block-quiz-tabs__title _tab-active">
+																		<span>На плане</span>
+																	</button>
+																	<button type="button" class="block-quiz-tabs__title">
+																		<span>Списком</span>
+																	</button>
+																</nav>
+																<div data-tabs-body class="block-quiz-tabs__content">
+																	<div class="block-quiz-tabs__body">
+																		<ul>
+																			<li>
+
+																			</li>
+																		</ul>
+																	</div>
+																	<div class="block-quiz-tabs__body">
+
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="block-quiz-layout__right">
+														<img src="img/image10.webp" alt="" class="block-quiz-layout__plan">
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="block-quiz-center__column">
+											<div class="block-quiz-center__body">
+												<div class="block-quiz-center__titles">
+													<div class="block-quiz-center__title">
+														4. Стиль
+													</div>
+													<p>
+														Выберите стиль интерьера, который вам нравится
+													</p>
+												</div>
+												<div class="options">
+													<label class="options__item">
+														<input hidden class="options__input" checked type="checkbox" value="1" name="checkbox1">
+														<span class="options__label">
+															<img src="img/catalog/image1.webp" alt="" class="options__pic1">
+															<span class="options__text">
+																<span>Современный</span>
+																<span class="p">Описание</span>
+															</span>
+														</span>
+													</label>
+													<label class="options__item">
+														<input hidden class="options__input" type="checkbox" value="2" name="checkbox1">
+														<span class="options__label">
+															<img src="img/catalog/image10.webp" alt="" class="options__pic1">
+															<span class="options__text">
+																<span>Минимализм</span>
+																<span class="p">Описание</span>
+															</span>
+														</span>
+													</label>
+													<label class="options__item">
+														<input hidden class="options__input" type="checkbox" value="3" name="checkbox1">
+														<span class="options__label">
+															<img src="img/catalog/image11.webp" alt="" class="options__pic1">
+															<span class="options__text">
+																<span>Скандинавский</span>
+																<span class="p">Описание</span>
+															</span>
+														</span>
+													</label>
+													<label class="options__item">
+														<input hidden class="options__input" type="checkbox" value="4" name="checkbox1">
+														<span class="options__label">
+															<img src="img/catalog/image12.webp" alt="" class="options__pic1">
+															<span class="options__text">
+																<span>Классический</span>
+																<span class="p">Описание</span>
+															</span>
+														</span>
+													</label>
+													<label class="options__item">
+														<input hidden class="options__input" type="checkbox" value="5" name="checkbox1">
+														<span class="options__label">
+															<img src="img/catalog/image13.webp" alt="" class="options__pic1">
+															<span class="options__text">
+																<span>Лофт</span>
+																<span class="p">Описание</span>
+															</span>
+														</span>
+													</label>
+													<label class="options__item">
+														<input hidden class="options__input" type="checkbox" value="6" name="checkbox1">
+														<span class="options__label">
+															<img src="img/catalog/image14.webp" alt="" class="options__pic1">
+															<span class="options__text">
+																<span>Неоклассика</span>
+																<span class="p">Описание</span>
+															</span>
+														</span>
+													</label>
+													<label class="options__item">
+														<input hidden class="options__input" type="checkbox" value="7" name="checkbox1">
+														<span class="options__label">
+															<img src="img/catalog/image15.webp" alt="" class="options__pic1">
+															<span class="options__text">
+																<span>Японский</span>
+																<span class="p">Описание</span>
+															</span>
+														</span>
+													</label>
+													<label class="options__item">
+														<input hidden class="options__input" type="checkbox" value="8" name="checkbox1">
+														<span class="options__label">
+															<img src="img/catalog/image16.webp" alt="" class="options__pic1">
+															<span class="options__text">
+																<span>Эклектика</span>
+																<span class="p">Описание</span>
+															</span>
+														</span>
+													</label>
+												</div>
+												<div class="block-quiz-colors">
+													<div class="block-quiz-colors__column">
+														<div class="block-quiz-colors__titles">
+															<div class="block-quiz-colors__title">
+																Цветовая гамма <span>(опционально)</span>
+															</div>
+															<p>
+																Выберите предпочтительную цветовую палитру
+															</p>
+														</div>
+														<div class="options options-color1">
+															<label class="options__item">
+																<input hidden class="options__input" checked type="checkbox" value="1" name="checkbox2">
+																<span class="options__label">
+																	<img src="img/catalog/image1.webp" alt="" class="options__pic1">
+																	<span class="options__text">
+																		<span>Светлая</span>
+																	</span>
+																</span>
+															</label>
+															<label class="options__item">
+																<input hidden class="options__input" type="checkbox" value="2" name="checkbox2">
+																<span class="options__label">
+																	<img src="img/catalog/image10.webp" alt="" class="options__pic1">
+																	<span class="options__text">
+																		<span>Темная</span>
+																	</span>
+																</span>
+															</label>
+															<label class="options__item">
+																<input hidden class="options__input" type="checkbox" value="3" name="checkbox2">
+																<span class="options__label">
+																	<img src="img/catalog/image11.webp" alt="" class="options__pic1">
+																	<span class="options__text">
+																		<span>Натуральная</span>
+																	</span>
+																</span>
+															</label>
+															<label class="options__item">
+																<input hidden class="options__input" type="checkbox" value="4" name="checkbox2">
+																<span class="options__label">
+																	<img src="img/catalog/image12.webp" alt="" class="options__pic1">
+																	<span class="options__text">
+																		<span>Контрастный</span>
+																	</span>
+																</span>
+															</label>
+															<label class="options__item">
+																<input hidden class="options__input" type="checkbox" value="5" name="checkbox2">
+																<span class="options__label">
+																	<img src="img/catalog/image13.webp" alt="" class="options__pic1">
+																	<span class="options__text">
+																		<span>Пастельная</span>
+																	</span>
+																</span>
+															</label>
+															<label class="options__item">
+																<input hidden class="options__input" type="checkbox" value="6" name="checkbox2">
+																<span class="options__label">
+																	<img src="img/catalog/image14.webp" alt="" class="options__pic1">
+																	<span class="options__text">
+																		<span>Яркая</span>
+																	</span>
+																</span>
+															</label>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="block-quiz-center__column">
+											<div class="block-quiz-center__body">
+												<div class="block-quiz-center__titles">
+													<div class="block-quiz-center__title">
+														4. Материалы и фасады
+													</div>
+													<p>
+														Выберите материалы, цвета и отдельку для вашего интерьера
+													</p>
+												</div>
+												<div class="filter-projects">
+													<button data-filter="filter1" type="button" class="filter-projects__title active">
+														<span>
+															Кухонные фасады
+														</span>
+													</button>
+													<button data-filter="filter2" type="button" class="filter-projects__title">
+														<span>
+															Столешница
+														</span>
+													</button>
+													<button data-filter="filter3" type="button" class="filter-projects__title">
+														<span>Фартук</span>
+													</button>
+													<button data-filter="filter4" type="button" class="filter-projects__title">
+														<span>Пол</span>
+													</button>
+													<button data-filter="filter5" type="button" class="filter-projects__title">
+														<span>Стены</span>
+													</button>
+													<button data-filter="filter6" type="button" class="filter-projects__title">
+														<span>Потолок</span>
+													</button>
+													<button data-filter="filter7" type="button" class="filter-projects__title">
+														<span>Ручки и фурнитура</span>
+													</button>
+												</div>
+												<div class="block-quiz-colors">
+													<div data-filter="filter1" class="block-quiz-colors__left filter-card">
+														<div class="block-quiz-colors__column">
+															<div class="block-quiz-colors__titles">
+																<div class="block-quiz-colors__title">
+																	Кухонные фасады
+																</div>
+																<p>
+																	Выберите материал и цвет фасадов
+																</p>
+															</div>
+															<div class="options options-color3">
+																<label class="options__item">
+																	<input hidden class="options__input" checked type="checkbox" value="1" name="checkbox3">
+																	<span class="options__label">
+																		<img src="img/catalog/image1.webp" alt="" class="options__pic1">
+																		<span class="options__text">
+																			<span>МДФ матовый</span>
+																		</span>
+																	</span>
+																</label>
+																<label class="options__item">
+																	<input hidden class="options__input" type="checkbox" value="2" name="checkbox3">
+																	<span class="options__label">
+																		<img src="img/catalog/image10.webp" alt="" class="options__pic1">
+																		<span class="options__text">
+																			<span>МДФ глянец</span>
+																		</span>
+																	</span>
+																</label>
+																<label class="options__item">
+																	<input hidden class="options__input" type="checkbox" value="3" name="checkbox3">
+																	<span class="options__label">
+																		<img src="img/catalog/image11.webp" alt="" class="options__pic1">
+																		<span class="options__text">
+																			<span>Натуральное дерево</span>
+																		</span>
+																	</span>
+																</label>
+																<label class="options__item">
+																	<input hidden class="options__input" type="checkbox" value="4" name="checkbox3">
+																	<span class="options__label">
+																		<img src="img/catalog/image12.webp" alt="" class="options__pic1">
+																		<span class="options__text">
+																			<span>Шпон</span>
+																		</span>
+																	</span>
+																</label>
+																<label class="options__item">
+																	<input hidden class="options__input" type="checkbox" value="5" name="checkbox3">
+																	<span class="options__label">
+																		<img src="img/catalog/image13.webp" alt="" class="options__pic1">
+																		<span class="options__text">
+																			<span>Пластик HPL</span>
+																		</span>
+																	</span>
+																</label>
+																<label class="options__item">
+																	<input hidden class="options__input" type="checkbox" value="6" name="checkbox3">
+																	<span class="options__label">
+																		<img src="img/catalog/image14.webp" alt="" class="options__pic1">
+																		<span class="options__text">
+																			<span>Эмаль</span>
+																		</span>
+																	</span>
+																</label>
+																<label class="options__item">
+																	<input hidden class="options__input" type="checkbox" value="7" name="checkbox3">
+																	<span class="options__label">
+																		<img src="img/catalog/image15.webp" alt="" class="options__pic1">
+																		<span class="options__text">
+																			<span>Стекло</span>
+																		</span>
+																	</span>
+																</label>
+																<label class="options__item">
+																	<input hidden class="options__input" type="checkbox" value="8" name="checkbox3">
+																	<span class="options__label">
+																		<img src="img/catalog/image16.webp" alt="" class="options__pic1">
+																		<span class="options__text">
+																			<span>Металл</span>
+																		</span>
+																	</span>
+																</label>
+															</div>
+														</div>
+														<div class="block-quiz-colors__column">
+															<div class="block-quiz-colors__titles">
+																<div class="block-quiz-colors__title">
+																	Цвет фасадов
+																</div>
+															</div>
+															<div class="options options-color2">
+																<label class="options__item">
+																	<input hidden class="options__input" checked type="checkbox" value="1" name="checkbox2">
+																	<span class="options__label">
+																		<span style="background-color: #fff;" class="options__color"></span>
+																	</span>
+																</label>
+																<label class="options__item">
+																	<input hidden class="options__input" type="checkbox" value="2" name="checkbox2">
+																	<span class="options__label">
+																		<span style="background-color: #98c8f5;" class="options__color"></span>
+																	</span>
+																</label>
+																<label class="options__item">
+																	<input hidden class="options__input" type="checkbox" value="3" name="checkbox2">
+																	<span class="options__label">
+																		<span style="background-color: #eaf598;" class="options__color"></span>
+																	</span>
+																</label>
+															</div>
+														</div>
+													</div>
+													<div data-filter="filter2" class="block-quiz-colors__left filter-card">
+														<div class="block-quiz-colors__column">
+															<div class="block-quiz-colors__titles">
+																<div class="block-quiz-colors__title">
+																	Кухонные фасады2
+																</div>
+																<p>
+																	Выберите материал и цвет фасадов
+																</p>
+															</div>
+															<div class="options options-color3">
+																<label class="options__item">
+																	<input hidden class="options__input" checked type="checkbox" value="1" name="checkbox3">
+																	<span class="options__label">
+																		<img src="img/catalog/image1.webp" alt="" class="options__pic1">
+																		<span class="options__text">
+																			<span>МДФ матовый</span>
+																		</span>
+																	</span>
+																</label>
+																<label class="options__item">
+																	<input hidden class="options__input" type="checkbox" value="2" name="checkbox3">
+																	<span class="options__label">
+																		<img src="img/catalog/image10.webp" alt="" class="options__pic1">
+																		<span class="options__text">
+																			<span>МДФ глянец</span>
+																		</span>
+																	</span>
+																</label>
+																<label class="options__item">
+																	<input hidden class="options__input" type="checkbox" value="3" name="checkbox3">
+																	<span class="options__label">
+																		<img src="img/catalog/image11.webp" alt="" class="options__pic1">
+																		<span class="options__text">
+																			<span>Натуральное дерево</span>
+																		</span>
+																	</span>
+																</label>
+																<label class="options__item">
+																	<input hidden class="options__input" type="checkbox" value="4" name="checkbox3">
+																	<span class="options__label">
+																		<img src="img/catalog/image12.webp" alt="" class="options__pic1">
+																		<span class="options__text">
+																			<span>Шпон</span>
+																		</span>
+																	</span>
+																</label>
+																<label class="options__item">
+																	<input hidden class="options__input" type="checkbox" value="5" name="checkbox3">
+																	<span class="options__label">
+																		<img src="img/catalog/image13.webp" alt="" class="options__pic1">
+																		<span class="options__text">
+																			<span>Пластик HPL</span>
+																		</span>
+																	</span>
+																</label>
+																<label class="options__item">
+																	<input hidden class="options__input" type="checkbox" value="6" name="checkbox3">
+																	<span class="options__label">
+																		<img src="img/catalog/image14.webp" alt="" class="options__pic1">
+																		<span class="options__text">
+																			<span>Эмаль</span>
+																		</span>
+																	</span>
+																</label>
+																<label class="options__item">
+																	<input hidden class="options__input" type="checkbox" value="7" name="checkbox3">
+																	<span class="options__label">
+																		<img src="img/catalog/image15.webp" alt="" class="options__pic1">
+																		<span class="options__text">
+																			<span>Стекло</span>
+																		</span>
+																	</span>
+																</label>
+																<label class="options__item">
+																	<input hidden class="options__input" type="checkbox" value="8" name="checkbox3">
+																	<span class="options__label">
+																		<img src="img/catalog/image16.webp" alt="" class="options__pic1">
+																		<span class="options__text">
+																			<span>Металл</span>
+																		</span>
+																	</span>
+																</label>
+															</div>
+														</div>
+														<div class="block-quiz-colors__column">
+															<div class="block-quiz-colors__titles">
+																<div class="block-quiz-colors__title">
+																	Цвет фасадов
+																</div>
+															</div>
+															<div class="options options-color2">
+																<label class="options__item">
+																	<input hidden class="options__input" checked type="checkbox" value="1" name="checkbox2">
+																	<span class="options__label">
+																		<span style="background-color: #fff;" class="options__color"></span>
+																	</span>
+																</label>
+																<label class="options__item">
+																	<input hidden class="options__input" type="checkbox" value="2" name="checkbox2">
+																	<span class="options__label">
+																		<span style="background-color: #98c8f5;" class="options__color"></span>
+																	</span>
+																</label>
+																<label class="options__item">
+																	<input hidden class="options__input" type="checkbox" value="3" name="checkbox2">
+																	<span class="options__label">
+																		<span style="background-color: #eaf598;" class="options__color"></span>
+																	</span>
+																</label>
+															</div>
+														</div>
+													</div>
+													<div data-filter="filter3" class="block-quiz-colors__left filter-card">
+														<div class="block-quiz-colors__column">
+															<div class="block-quiz-colors__titles">
+																<div class="block-quiz-colors__title">
+																	Кухонные фасады3
+																</div>
+																<p>
+																	Выберите материал и цвет фасадов
+																</p>
+															</div>
+															<div class="options options-color3">
+																<label class="options__item">
+																	<input hidden class="options__input" checked type="checkbox" value="1" name="checkbox3">
+																	<span class="options__label">
+																		<img src="img/catalog/image1.webp" alt="" class="options__pic1">
+																		<span class="options__text">
+																			<span>МДФ матовый</span>
+																		</span>
+																	</span>
+																</label>
+																<label class="options__item">
+																	<input hidden class="options__input" type="checkbox" value="2" name="checkbox3">
+																	<span class="options__label">
+																		<img src="img/catalog/image10.webp" alt="" class="options__pic1">
+																		<span class="options__text">
+																			<span>МДФ глянец</span>
+																		</span>
+																	</span>
+																</label>
+																<label class="options__item">
+																	<input hidden class="options__input" type="checkbox" value="3" name="checkbox3">
+																	<span class="options__label">
+																		<img src="img/catalog/image11.webp" alt="" class="options__pic1">
+																		<span class="options__text">
+																			<span>Натуральное дерево</span>
+																		</span>
+																	</span>
+																</label>
+																<label class="options__item">
+																	<input hidden class="options__input" type="checkbox" value="4" name="checkbox3">
+																	<span class="options__label">
+																		<img src="img/catalog/image12.webp" alt="" class="options__pic1">
+																		<span class="options__text">
+																			<span>Шпон</span>
+																		</span>
+																	</span>
+																</label>
+																<label class="options__item">
+																	<input hidden class="options__input" type="checkbox" value="5" name="checkbox3">
+																	<span class="options__label">
+																		<img src="img/catalog/image13.webp" alt="" class="options__pic1">
+																		<span class="options__text">
+																			<span>Пластик HPL</span>
+																		</span>
+																	</span>
+																</label>
+																<label class="options__item">
+																	<input hidden class="options__input" type="checkbox" value="6" name="checkbox3">
+																	<span class="options__label">
+																		<img src="img/catalog/image14.webp" alt="" class="options__pic1">
+																		<span class="options__text">
+																			<span>Эмаль</span>
+																		</span>
+																	</span>
+																</label>
+																<label class="options__item">
+																	<input hidden class="options__input" type="checkbox" value="7" name="checkbox3">
+																	<span class="options__label">
+																		<img src="img/catalog/image15.webp" alt="" class="options__pic1">
+																		<span class="options__text">
+																			<span>Стекло</span>
+																		</span>
+																	</span>
+																</label>
+																<label class="options__item">
+																	<input hidden class="options__input" type="checkbox" value="8" name="checkbox3">
+																	<span class="options__label">
+																		<img src="img/catalog/image16.webp" alt="" class="options__pic1">
+																		<span class="options__text">
+																			<span>Металл</span>
+																		</span>
+																	</span>
+																</label>
+															</div>
+														</div>
+														<div class="block-quiz-colors__column">
+															<div class="block-quiz-colors__titles">
+																<div class="block-quiz-colors__title">
+																	Цвет фасадов
+																</div>
+															</div>
+															<div class="options options-color2">
+																<label class="options__item">
+																	<input hidden class="options__input" checked type="checkbox" value="1" name="checkbox2">
+																	<span class="options__label">
+																		<span style="background-color: #fff;" class="options__color"></span>
+																	</span>
+																</label>
+																<label class="options__item">
+																	<input hidden class="options__input" type="checkbox" value="2" name="checkbox2">
+																	<span class="options__label">
+																		<span style="background-color: #98c8f5;" class="options__color"></span>
+																	</span>
+																</label>
+																<label class="options__item">
+																	<input hidden class="options__input" type="checkbox" value="3" name="checkbox2">
+																	<span class="options__label">
+																		<span style="background-color: #eaf598;" class="options__color"></span>
+																	</span>
+																</label>
+															</div>
+														</div>
+													</div>
+													<div data-filter="filter4" class="block-quiz-colors__left filter-card">
+														<div class="block-quiz-colors__column">
+															<div class="block-quiz-colors__titles">
+																<div class="block-quiz-colors__title">
+																	Кухонные фасады4
+																</div>
+																<p>
+																	Выберите материал и цвет фасадов
+																</p>
+															</div>
+															<div class="options options-color3">
+																<label class="options__item">
+																	<input hidden class="options__input" checked type="checkbox" value="1" name="checkbox3">
+																	<span class="options__label">
+																		<img src="img/catalog/image1.webp" alt="" class="options__pic1">
+																		<span class="options__text">
+																			<span>МДФ матовый</span>
+																		</span>
+																	</span>
+																</label>
+																<label class="options__item">
+																	<input hidden class="options__input" type="checkbox" value="2" name="checkbox3">
+																	<span class="options__label">
+																		<img src="img/catalog/image10.webp" alt="" class="options__pic1">
+																		<span class="options__text">
+																			<span>МДФ глянец</span>
+																		</span>
+																	</span>
+																</label>
+																<label class="options__item">
+																	<input hidden class="options__input" type="checkbox" value="3" name="checkbox3">
+																	<span class="options__label">
+																		<img src="img/catalog/image11.webp" alt="" class="options__pic1">
+																		<span class="options__text">
+																			<span>Натуральное дерево</span>
+																		</span>
+																	</span>
+																</label>
+																<label class="options__item">
+																	<input hidden class="options__input" type="checkbox" value="4" name="checkbox3">
+																	<span class="options__label">
+																		<img src="img/catalog/image12.webp" alt="" class="options__pic1">
+																		<span class="options__text">
+																			<span>Шпон</span>
+																		</span>
+																	</span>
+																</label>
+																<label class="options__item">
+																	<input hidden class="options__input" type="checkbox" value="5" name="checkbox3">
+																	<span class="options__label">
+																		<img src="img/catalog/image13.webp" alt="" class="options__pic1">
+																		<span class="options__text">
+																			<span>Пластик HPL</span>
+																		</span>
+																	</span>
+																</label>
+																<label class="options__item">
+																	<input hidden class="options__input" type="checkbox" value="6" name="checkbox3">
+																	<span class="options__label">
+																		<img src="img/catalog/image14.webp" alt="" class="options__pic1">
+																		<span class="options__text">
+																			<span>Эмаль</span>
+																		</span>
+																	</span>
+																</label>
+																<label class="options__item">
+																	<input hidden class="options__input" type="checkbox" value="7" name="checkbox3">
+																	<span class="options__label">
+																		<img src="img/catalog/image15.webp" alt="" class="options__pic1">
+																		<span class="options__text">
+																			<span>Стекло</span>
+																		</span>
+																	</span>
+																</label>
+																<label class="options__item">
+																	<input hidden class="options__input" type="checkbox" value="8" name="checkbox3">
+																	<span class="options__label">
+																		<img src="img/catalog/image16.webp" alt="" class="options__pic1">
+																		<span class="options__text">
+																			<span>Металл</span>
+																		</span>
+																	</span>
+																</label>
+															</div>
+														</div>
+														<div class="block-quiz-colors__column">
+															<div class="block-quiz-colors__titles">
+																<div class="block-quiz-colors__title">
+																	Цвет фасадов
+																</div>
+															</div>
+															<div class="options options-color2">
+																<label class="options__item">
+																	<input hidden class="options__input" checked type="checkbox" value="1" name="checkbox2">
+																	<span class="options__label">
+																		<span style="background-color: #fff;" class="options__color"></span>
+																	</span>
+																</label>
+																<label class="options__item">
+																	<input hidden class="options__input" type="checkbox" value="2" name="checkbox2">
+																	<span class="options__label">
+																		<span style="background-color: #98c8f5;" class="options__color"></span>
+																	</span>
+																</label>
+																<label class="options__item">
+																	<input hidden class="options__input" type="checkbox" value="3" name="checkbox2">
+																	<span class="options__label">
+																		<span style="background-color: #eaf598;" class="options__color"></span>
+																	</span>
+																</label>
+															</div>
+														</div>
+													</div>
+													<div data-filter="filter5" class="block-quiz-colors__left filter-card">
+														<div class="block-quiz-colors__column">
+															<div class="block-quiz-colors__titles">
+																<div class="block-quiz-colors__title">
+																	Кухонные фасады5
+																</div>
+																<p>
+																	Выберите материал и цвет фасадов
+																</p>
+															</div>
+															<div class="options options-color3">
+																<label class="options__item">
+																	<input hidden class="options__input" checked type="checkbox" value="1" name="checkbox3">
+																	<span class="options__label">
+																		<img src="img/catalog/image1.webp" alt="" class="options__pic1">
+																		<span class="options__text">
+																			<span>МДФ матовый</span>
+																		</span>
+																	</span>
+																</label>
+																<label class="options__item">
+																	<input hidden class="options__input" type="checkbox" value="2" name="checkbox3">
+																	<span class="options__label">
+																		<img src="img/catalog/image10.webp" alt="" class="options__pic1">
+																		<span class="options__text">
+																			<span>МДФ глянец</span>
+																		</span>
+																	</span>
+																</label>
+																<label class="options__item">
+																	<input hidden class="options__input" type="checkbox" value="3" name="checkbox3">
+																	<span class="options__label">
+																		<img src="img/catalog/image11.webp" alt="" class="options__pic1">
+																		<span class="options__text">
+																			<span>Натуральное дерево</span>
+																		</span>
+																	</span>
+																</label>
+																<label class="options__item">
+																	<input hidden class="options__input" type="checkbox" value="4" name="checkbox3">
+																	<span class="options__label">
+																		<img src="img/catalog/image12.webp" alt="" class="options__pic1">
+																		<span class="options__text">
+																			<span>Шпон</span>
+																		</span>
+																	</span>
+																</label>
+																<label class="options__item">
+																	<input hidden class="options__input" type="checkbox" value="5" name="checkbox3">
+																	<span class="options__label">
+																		<img src="img/catalog/image13.webp" alt="" class="options__pic1">
+																		<span class="options__text">
+																			<span>Пластик HPL</span>
+																		</span>
+																	</span>
+																</label>
+																<label class="options__item">
+																	<input hidden class="options__input" type="checkbox" value="6" name="checkbox3">
+																	<span class="options__label">
+																		<img src="img/catalog/image14.webp" alt="" class="options__pic1">
+																		<span class="options__text">
+																			<span>Эмаль</span>
+																		</span>
+																	</span>
+																</label>
+																<label class="options__item">
+																	<input hidden class="options__input" type="checkbox" value="7" name="checkbox3">
+																	<span class="options__label">
+																		<img src="img/catalog/image15.webp" alt="" class="options__pic1">
+																		<span class="options__text">
+																			<span>Стекло</span>
+																		</span>
+																	</span>
+																</label>
+																<label class="options__item">
+																	<input hidden class="options__input" type="checkbox" value="8" name="checkbox3">
+																	<span class="options__label">
+																		<img src="img/catalog/image16.webp" alt="" class="options__pic1">
+																		<span class="options__text">
+																			<span>Металл</span>
+																		</span>
+																	</span>
+																</label>
+															</div>
+														</div>
+														<div class="block-quiz-colors__column">
+															<div class="block-quiz-colors__titles">
+																<div class="block-quiz-colors__title">
+																	Цвет фасадов
+																</div>
+															</div>
+															<div class="options options-color2">
+																<label class="options__item">
+																	<input hidden class="options__input" checked type="checkbox" value="1" name="checkbox2">
+																	<span class="options__label">
+																		<span style="background-color: #fff;" class="options__color"></span>
+																	</span>
+																</label>
+																<label class="options__item">
+																	<input hidden class="options__input" type="checkbox" value="2" name="checkbox2">
+																	<span class="options__label">
+																		<span style="background-color: #98c8f5;" class="options__color"></span>
+																	</span>
+																</label>
+																<label class="options__item">
+																	<input hidden class="options__input" type="checkbox" value="3" name="checkbox2">
+																	<span class="options__label">
+																		<span style="background-color: #eaf598;" class="options__color"></span>
+																	</span>
+																</label>
+															</div>
+														</div>
+													</div>
+													<div data-filter="filter6" class="block-quiz-colors__left filter-card">
+														<div class="block-quiz-colors__column">
+															<div class="block-quiz-colors__titles">
+																<div class="block-quiz-colors__title">
+																	Кухонные фасады6
+																</div>
+																<p>
+																	Выберите материал и цвет фасадов
+																</p>
+															</div>
+															<div class="options options-color3">
+																<label class="options__item">
+																	<input hidden class="options__input" checked type="checkbox" value="1" name="checkbox3">
+																	<span class="options__label">
+																		<img src="img/catalog/image1.webp" alt="" class="options__pic1">
+																		<span class="options__text">
+																			<span>МДФ матовый</span>
+																		</span>
+																	</span>
+																</label>
+																<label class="options__item">
+																	<input hidden class="options__input" type="checkbox" value="2" name="checkbox3">
+																	<span class="options__label">
+																		<img src="img/catalog/image10.webp" alt="" class="options__pic1">
+																		<span class="options__text">
+																			<span>МДФ глянец</span>
+																		</span>
+																	</span>
+																</label>
+																<label class="options__item">
+																	<input hidden class="options__input" type="checkbox" value="3" name="checkbox3">
+																	<span class="options__label">
+																		<img src="img/catalog/image11.webp" alt="" class="options__pic1">
+																		<span class="options__text">
+																			<span>Натуральное дерево</span>
+																		</span>
+																	</span>
+																</label>
+																<label class="options__item">
+																	<input hidden class="options__input" type="checkbox" value="4" name="checkbox3">
+																	<span class="options__label">
+																		<img src="img/catalog/image12.webp" alt="" class="options__pic1">
+																		<span class="options__text">
+																			<span>Шпон</span>
+																		</span>
+																	</span>
+																</label>
+																<label class="options__item">
+																	<input hidden class="options__input" type="checkbox" value="5" name="checkbox3">
+																	<span class="options__label">
+																		<img src="img/catalog/image13.webp" alt="" class="options__pic1">
+																		<span class="options__text">
+																			<span>Пластик HPL</span>
+																		</span>
+																	</span>
+																</label>
+																<label class="options__item">
+																	<input hidden class="options__input" type="checkbox" value="6" name="checkbox3">
+																	<span class="options__label">
+																		<img src="img/catalog/image14.webp" alt="" class="options__pic1">
+																		<span class="options__text">
+																			<span>Эмаль</span>
+																		</span>
+																	</span>
+																</label>
+																<label class="options__item">
+																	<input hidden class="options__input" type="checkbox" value="7" name="checkbox3">
+																	<span class="options__label">
+																		<img src="img/catalog/image15.webp" alt="" class="options__pic1">
+																		<span class="options__text">
+																			<span>Стекло</span>
+																		</span>
+																	</span>
+																</label>
+																<label class="options__item">
+																	<input hidden class="options__input" type="checkbox" value="8" name="checkbox3">
+																	<span class="options__label">
+																		<img src="img/catalog/image16.webp" alt="" class="options__pic1">
+																		<span class="options__text">
+																			<span>Металл</span>
+																		</span>
+																	</span>
+																</label>
+															</div>
+														</div>
+														<div class="block-quiz-colors__column">
+															<div class="block-quiz-colors__titles">
+																<div class="block-quiz-colors__title">
+																	Цвет фасадов
+																</div>
+															</div>
+															<div class="options options-color2">
+																<label class="options__item">
+																	<input hidden class="options__input" checked type="checkbox" value="1" name="checkbox2">
+																	<span class="options__label">
+																		<span style="background-color: #fff;" class="options__color"></span>
+																	</span>
+																</label>
+																<label class="options__item">
+																	<input hidden class="options__input" type="checkbox" value="2" name="checkbox2">
+																	<span class="options__label">
+																		<span style="background-color: #98c8f5;" class="options__color"></span>
+																	</span>
+																</label>
+																<label class="options__item">
+																	<input hidden class="options__input" type="checkbox" value="3" name="checkbox2">
+																	<span class="options__label">
+																		<span style="background-color: #eaf598;" class="options__color"></span>
+																	</span>
+																</label>
+															</div>
+														</div>
+													</div>
+													<div data-filter="filter7" class="block-quiz-colors__left filter-card">
+														<div class="block-quiz-colors__column">
+															<div class="block-quiz-colors__titles">
+																<div class="block-quiz-colors__title">
+																	Кухонные фасады
+																</div>
+																<p>
+																	Выберите материал и цвет фасадов
+																</p>
+															</div>
+															<div class="options options-color3">
+																<label class="options__item">
+																	<input hidden class="options__input" checked type="checkbox" value="1" name="checkbox3">
+																	<span class="options__label">
+																		<img src="img/catalog/image1.webp" alt="" class="options__pic1">
+																		<span class="options__text">
+																			<span>МДФ матовый</span>
+																		</span>
+																	</span>
+																</label>
+																<label class="options__item">
+																	<input hidden class="options__input" type="checkbox" value="2" name="checkbox3">
+																	<span class="options__label">
+																		<img src="img/catalog/image10.webp" alt="" class="options__pic1">
+																		<span class="options__text">
+																			<span>МДФ глянец</span>
+																		</span>
+																	</span>
+																</label>
+																<label class="options__item">
+																	<input hidden class="options__input" type="checkbox" value="3" name="checkbox3">
+																	<span class="options__label">
+																		<img src="img/catalog/image11.webp" alt="" class="options__pic1">
+																		<span class="options__text">
+																			<span>Натуральное дерево</span>
+																		</span>
+																	</span>
+																</label>
+																<label class="options__item">
+																	<input hidden class="options__input" type="checkbox" value="4" name="checkbox3">
+																	<span class="options__label">
+																		<img src="img/catalog/image12.webp" alt="" class="options__pic1">
+																		<span class="options__text">
+																			<span>Шпон</span>
+																		</span>
+																	</span>
+																</label>
+																<label class="options__item">
+																	<input hidden class="options__input" type="checkbox" value="5" name="checkbox3">
+																	<span class="options__label">
+																		<img src="img/catalog/image13.webp" alt="" class="options__pic1">
+																		<span class="options__text">
+																			<span>Пластик HPL</span>
+																		</span>
+																	</span>
+																</label>
+																<label class="options__item">
+																	<input hidden class="options__input" type="checkbox" value="6" name="checkbox3">
+																	<span class="options__label">
+																		<img src="img/catalog/image14.webp" alt="" class="options__pic1">
+																		<span class="options__text">
+																			<span>Эмаль</span>
+																		</span>
+																	</span>
+																</label>
+																<label class="options__item">
+																	<input hidden class="options__input" type="checkbox" value="7" name="checkbox3">
+																	<span class="options__label">
+																		<img src="img/catalog/image15.webp" alt="" class="options__pic1">
+																		<span class="options__text">
+																			<span>Стекло</span>
+																		</span>
+																	</span>
+																</label>
+																<label class="options__item">
+																	<input hidden class="options__input" type="checkbox" value="8" name="checkbox3">
+																	<span class="options__label">
+																		<img src="img/catalog/image16.webp" alt="" class="options__pic1">
+																		<span class="options__text">
+																			<span>Металл</span>
+																		</span>
+																	</span>
+																</label>
+															</div>
+														</div>
+														<div class="block-quiz-colors__column">
+															<div class="block-quiz-colors__titles">
+																<div class="block-quiz-colors__title">
+																	Цвет фасадов
+																</div>
+															</div>
+															<div class="options options-color2">
+																<label class="options__item">
+																	<input hidden class="options__input" checked type="checkbox" value="1" name="checkbox2">
+																	<span class="options__label">
+																		<span style="background-color: #fff;" class="options__color"></span>
+																	</span>
+																</label>
+																<label class="options__item">
+																	<input hidden class="options__input" type="checkbox" value="2" name="checkbox2">
+																	<span class="options__label">
+																		<span style="background-color: #98c8f5;" class="options__color"></span>
+																	</span>
+																</label>
+																<label class="options__item">
+																	<input hidden class="options__input" type="checkbox" value="3" name="checkbox2">
+																	<span class="options__label">
+																		<span style="background-color: #eaf598;" class="options__color"></span>
+																	</span>
+																</label>
+															</div>
+														</div>
+													</div>
+													<div class="quiz-colors-result">
+														<div class="quiz-colors-result__top">
+															<div class="quiz-colors-result__title">
+																Ваш выбор
+															</div>
+															<button type="button" class="quiz-colors-result__reset">
+																Сбросить все
+															</button>
+														</div>
+														<img src="img/image2.webp" alt="" class="quiz-colors-result__pic1">
+														<ul>
+															<li>
+																<img src="img/image2.webp" alt="" class="quiz-colors-result__pic2">
+																<div class="quiz-colors-result__item">
+																	<div class="quiz-colors-result__name">
+																		Заголовок
+																	</div>
+																	<p>
+																		Описание
+																	</p>
+																</div>
+																<button type="button" class="quiz-colors-result__delete">
+																	<svg aria-hidden="true" width="8" height="8">
+																		<use xlink:href="img/sprite.svg#close"></use>
+																	</svg>
+																</button>
+															</li>
+															<li>
+																<img src="img/image2.webp" alt="" class="quiz-colors-result__pic2">
+																<div class="quiz-colors-result__item">
+																	<div class="quiz-colors-result__name">
+																		Заголовок
+																	</div>
+																	<p>
+																		Описание
+																	</p>
+																</div>
+																<button type="button" class="quiz-colors-result__delete">
+																	<svg aria-hidden="true" width="8" height="8">
+																		<use xlink:href="img/sprite.svg#close"></use>
+																	</svg>
+																</button>
+															</li>
+															<li>
+																<img src="img/image2.webp" alt="" class="quiz-colors-result__pic2">
+																<div class="quiz-colors-result__item">
+																	<div class="quiz-colors-result__name">
+																		Заголовок
+																	</div>
+																	<p>
+																		Описание
+																	</p>
+																</div>
+																<button type="button" class="quiz-colors-result__delete">
+																	<svg aria-hidden="true" width="8" height="8">
+																		<use xlink:href="img/sprite.svg#close"></use>
+																	</svg>
+																</button>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
 									</div>
-									<div class="block-quiz-right">
+									<div data-da=".block-quiz__content, 1640, last" class="block-quiz-right">
 										<div class="block-quiz-right__works">
 											<div class="block-quiz-right__title">
 												Как это работает?
