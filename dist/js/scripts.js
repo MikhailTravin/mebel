@@ -2217,3 +2217,237 @@ function tabs() {
   }
 }
 tabs();
+
+//========================================================================================================================================================
+
+function quiz() {
+  const stepsIndicators = document.querySelectorAll('.steps-active .block-quiz-steps__step');
+  const stepColumns = document.querySelectorAll('.block-quiz-center__column');
+
+  const bottomPrev = document.querySelector('.block-quiz__bottom .btn-prev');
+  const bottomNext = document.querySelector('.block-quiz__bottom .btn-next');
+  const bottomPrice = document.querySelector('.block-quiz__bottom .btn-price');
+  const stepCounter = document.querySelector('.block-quiz__steps');
+
+  const innerNext = document.querySelector('.block-quiz-center__next .btn-next');
+
+  if (!stepColumns.length) return;
+
+  const stepColumnsCount = stepColumns.length;
+  const totalSteps = stepsIndicators.length;
+
+  let currentStep = 1;
+
+  const userAnswers = {};
+
+  const validators = {
+    1: () => !!stepColumns[0]?.querySelector('input[name="option1"]:checked'),
+    2: () => {
+      const inputs = stepColumns[1]?.querySelectorAll('.block-quiz-layout__input input');
+      if (!inputs || !inputs.length) return false;
+      return Array.from(inputs).every(inp => inp.value.trim() !== '');
+    },
+    3: () => !!stepColumns[2]?.querySelector('.options2 input[name="option2"]:checked'),
+    4: () => !!stepColumns[3]?.querySelector('.options input[name="checkbox1"]:checked'),
+    5: () => !!stepColumns[4]?.querySelector('.filter-card[data-filter="filter1"] input[name="checkbox3"]:checked'),
+    6: () => true
+  };
+
+  function isCurrentStepValid() {
+    const validator = validators[currentStep];
+    return validator ? validator() : true;
+  }
+
+  function updateButtonsState() {
+    const valid = isCurrentStepValid();
+
+    const nextVisible = currentStep < totalSteps;
+    if (bottomNext) {
+      bottomNext.style.display = nextVisible ? 'flex' : 'none';
+      if (nextVisible) {
+        bottomNext.disabled = !valid;
+        bottomNext.classList.toggle('disabled', !valid);
+      }
+    }
+
+    const priceVisible = currentStep === totalSteps;
+    if (bottomPrice) {
+      bottomPrice.style.display = priceVisible ? 'flex' : 'none';
+      if (priceVisible) {
+        bottomPrice.disabled = !valid;
+        bottomPrice.classList.toggle('disabled', !valid);
+      }
+    }
+
+    if (innerNext) {
+      innerNext.disabled = !valid;
+      innerNext.classList.toggle('disabled', !valid);
+    }
+  }
+
+  function collectStep1() {
+    const checked = stepColumns[0]?.querySelector('input[name="option1"]:checked');
+    if (!checked) return null;
+    const label = checked.closest('.options__item');
+    return label?.querySelector('.options__text span')?.textContent.trim() || 'Выбрано';
+  }
+
+  function collectStep2() {
+    const inputs = stepColumns[1]?.querySelectorAll('.block-quiz-layout__input input');
+    if (!inputs) return null;
+    const dlina = inputs[0]?.value.trim();
+    const shirina = inputs[1]?.value.trim();
+    const vysota = inputs[2]?.value.trim();
+    if (!dlina || !shirina || !vysota) return null;
+    return `${dlina} × ${shirina} × ${vysota} м`;
+  }
+
+  function collectStep3() {
+    const checkedForm = stepColumns[2]?.querySelector('.options2 input[name="option2"]:checked');
+    if (!checkedForm) return null;
+    const label = checkedForm.closest('.options2__item');
+    const formText = label?.querySelector('.options2__text')?.textContent.trim() || 'Форма';
+    const activeTab = stepColumns[2]?.querySelector('.block-quiz-tabs__title._tab-active span')?.textContent.trim();
+    return activeTab ? `${formText}, ${activeTab.toLowerCase()}` : formText;
+  }
+
+  function collectStep4() {
+    const checkedStyle = stepColumns[3]?.querySelector('.options input[name="checkbox1"]:checked');
+    if (!checkedStyle) return null;
+    const label = checkedStyle.closest('.options__item');
+    const styleText = label?.querySelector('.options__text > span')?.textContent.trim() || 'Стиль';
+
+    const checkedColor = stepColumns[3]?.querySelector('.options-color1 input[name="checkbox2"]:checked');
+    let colorText = '';
+    if (checkedColor) {
+      const text = checkedColor.closest('.options__item')?.querySelector('.options__text span')?.textContent.trim();
+      if (text) colorText = `, ${text.toLowerCase()} гамма`;
+    }
+    return `${styleText}${colorText}`;
+  }
+
+  function collectStep5() {
+    const checked = stepColumns[4]?.querySelector('.filter-card[data-filter="filter1"] input[name="checkbox3"]:checked');
+    if (!checked) return null;
+    const label = checked.closest('.options__item');
+    return label?.querySelector('.options__text span')?.textContent.trim() || 'Материал';
+  }
+
+  function updateStepIndicator(index, text) {
+    const step = stepsIndicators[index];
+    if (!step || !text) return;
+    const p = step.querySelector('.block-quiz-steps__item p');
+    if (p) p.textContent = text;
+  }
+
+  function updateLastStepLabel() {
+    const lastStep = stepsIndicators[totalSteps - 1];
+    if (!lastStep) return;
+    const title = lastStep.querySelector('.block-quiz-steps__title');
+    const p = lastStep.querySelector('.block-quiz-steps__item p');
+
+    if (currentStep >= totalSteps) {
+      if (title) title.textContent = 'Оплата';
+      if (p) p.textContent = 'Завершите заказ';
+    } else {
+      if (title) title.textContent = 'Генерация';
+      if (p) p.textContent = 'Получите 3D-визуализацию';
+    }
+  }
+
+  function updateDescription() {
+    const values = document.querySelectorAll('.block-quiz-descr__value');
+    if (!values.length) return;
+    const order = [1, 2, 3, 4, 5];
+    order.forEach((step, index) => {
+      const el = values[index];
+      if (!el) return;
+      const answer = userAnswers[step];
+      if (answer) el.textContent = answer;
+    });
+  }
+
+  function updateUI() {
+    stepsIndicators.forEach((step, index) => {
+      const isActive = (index + 1) <= currentStep && (index + 1) <= totalSteps;
+      step.classList.toggle('active', isActive);
+    });
+
+    stepColumns.forEach((col, index) => {
+      col.classList.toggle('active', index === currentStep - 1);
+    });
+
+    if (stepCounter) {
+      const showCounter = currentStep <= totalSteps;
+      stepCounter.style.opacity = showCounter ? '1' : '0';
+      stepCounter.style.pointerEvents = showCounter ? 'auto' : 'none';
+      if (showCounter) {
+        stepCounter.textContent = `Шаг ${currentStep} из ${totalSteps}`;
+      }
+    }
+
+    if (bottomPrev) {
+      const prevVisible = currentStep > 1;
+      bottomPrev.style.display = prevVisible ? 'flex' : 'none';
+    }
+
+    updateLastStepLabel();
+    updateDescription();
+    updateButtonsState();
+  }
+
+  function saveCurrentAnswer() {
+    const collectors = { 1: collectStep1, 2: collectStep2, 3: collectStep3, 4: collectStep4, 5: collectStep5 };
+    const fn = collectors[currentStep];
+    if (!fn) return;
+    const answer = fn();
+    if (answer) {
+      userAnswers[currentStep] = answer;
+      updateStepIndicator(currentStep - 1, answer);
+    }
+  }
+
+  function goNext() {
+    if (!isCurrentStepValid()) return;
+    if (currentStep >= stepColumnsCount) return;
+
+    saveCurrentAnswer();
+    currentStep++;
+    updateUI();
+
+    const quizContent = document.querySelector('.block-quiz__content');
+    if (quizContent) quizContent.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  function goPrev() {
+    if (currentStep > 1) {
+      currentStep--;
+      updateUI();
+      const quizContent = document.querySelector('.block-quiz__content');
+      if (quizContent) quizContent.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  if (innerNext) innerNext.addEventListener('click', (e) => { e.preventDefault(); goNext(); });
+  if (bottomNext) bottomNext.addEventListener('click', (e) => { e.preventDefault(); goNext(); });
+  if (bottomPrev) bottomPrev.addEventListener('click', (e) => { e.preventDefault(); goPrev(); });
+  if (bottomPrice) bottomPrice.addEventListener('click', (e) => { e.preventDefault(); goNext(); });
+
+  const quizRoot = document.querySelector('.block-quiz__content');
+  if (quizRoot) {
+    quizRoot.addEventListener('change', (e) => {
+      if (e.target.matches('input[type="radio"], input[type="checkbox"]')) {
+        updateButtonsState();
+      }
+    });
+    quizRoot.addEventListener('input', (e) => {
+      if (e.target.matches('input[type="text"], input[type="number"], input:not([type])')) {
+        updateButtonsState();
+      }
+    });
+  }
+
+  updateUI();
+}
+
+document.addEventListener('DOMContentLoaded', quiz);
